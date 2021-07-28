@@ -1,0 +1,66 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.BorderLayout;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import javax.swing.ScrollPaneConstants;
+
+public class LhksiarxikhPrakshGennhshs {
+
+	private JFrame frame;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LhksiarxikhPrakshGennhshs window = new LhksiarxikhPrakshGennhshs();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public LhksiarxikhPrakshGennhshs() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 744, 479);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new BorderLayout(0, 0));
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.BOLD, 26));
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setText("\u039B\u0397\u039E\u0399\u0391\u03A1\u03A7\u0399\u039A\u0397 \u03A0\u03A1\u0391\u039E\u0397 \u0393\u0395\u039D\u039D\u0397\u03A3\u0397\u03A3");
+		frame.getContentPane().add(textField, BorderLayout.NORTH);
+		textField.setColumns(10);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+		frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setEditable(false);
+		textPane.setText("\u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u039B\u0397\u039E.\u03A0\u03A1\u0391\u039E\u0397\u03A3\r\n\u03A7\u03B1\u03C1\u03B1\u03BA\u03C4\u03B7\u03C1\u03B9\u03C3\u03C4\u03B9\u03BA\u03CC \u0391\u03C3\u03C6\u03B1\u03BB\u03B5\u03AF\u03B1\u03C2:\r\n\u03A3\u03C4\u03BF\u03B9\u03C7\u03B5\u03AF\u03B1 \u039B\u03B7\u03BE. \u03A0\u03C1\u03AC\u03BE\u03B7\u03C2 \u0393\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2\r\n(\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2/\u03C4\u03CC\u03BC\u03BF\u03C2/\u03AD\u03C4\u03BF\u03C2):\r\n\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03B4\u03AE\u03BB\u03C9\u03C3\u03B7\u03C2:\r\n\u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u039D\u0395\u039F\u0393\u039D\u039F\u03A5                                           \u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u0394\u0397\u039B\u039F\u03A5\u039D\u03A4\u039F\u03A3\r\n\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF:                                                   \u039F\u03BD\u03BF\u03BC\u03B1\u03C4\u03B5\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF:\r\n\u038C\u03BD\u03BF\u03BC\u03B1:                                                     \u03A4\u03CC\u03C0\u03BF\u03C2 \u03BA\u03B1\u03C4\u03BF\u03B9\u03BA\u03AF\u03B1\u03C2:\r\n\u03A6\u03CD\u03BB\u03BF:\r\n\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1:                                                \u039A\u03B1\u03C4\u03B7\u03B3\u03BF\u03C1\u03AF\u03B1: \r\n\u038F\u03C1\u03B1:                                                       \u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u0399\u0391\u03A4\u03A1\u039F\u03A5\r\n\u039C\u03AD\u03C1\u03BF\u03C2 \u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2:                                            \u039F\u03BD\u03BF\u03BC\u03B1\u03C4\u03B5\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF:\r\n\u0395\u03AF\u03B4\u03BF\u03C2 \u03C4\u03BF\u03BA\u03B5\u03C4\u03BF\u03CD:                      \r\n\u03A3\u03B5\u03B9\u03C1\u03AC \u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2:            \r\n\r\n\u0391\u039C\u039A\u0391:\r\n\r\n\u03A4\u03CC\u03C0\u03BF\u03C2 \u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2                                             \u03A4\u03B7\u03BB\u03AD\u03C6\u03C9\u03BD\u03BF:\r\n(\u039F\u03B4\u03CC\u03C2, \u0391\u03C1., \u03A4\u039A,\r\n\u0394\u03B7\u03BC/\u03A4\u03BF\u03C0. \u039A\u03BF\u03B9\u03BD.\r\n\u0394\u03B7\u03BC. \u0395\u03BD\u03CC\u03C4, \u0394\u03AE\u03BC\u03BF\u03C2,\r\n\u039D\u03BF\u03BC\u03CC\u03C2, \u03A7\u03CE\u03C1\u03B1):\r\n\u03A0\u03B1\u03C1\u03B1\u03C3\u03C4\u03AC\u03C4\u03B5\u03C2 \r\n\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2:\r\n\r\n\u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u0393\u039F\u039D\u0395\u03A9\u039D                          \u03A0\u03B1\u03C4\u03AD\u03C1\u03B1\u03C2                                     \u039C\u03B7\u03C4\u03AD\u03C1\u03B1\r\n\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF:\r\n\u038C\u03BD\u03BF\u03BC\u03B1:\r\n\u0399\u03B8\u03B1\u03B3\u03AD\u03BD\u03B5\u03B9\u03B1:\r\n\u03A4\u03CC\u03C0\u03BF\u03C2 \u039A\u03B1\u03C4\u03BF\u03B9\u03BA\u03AF\u03B1\u03C2(\u039F\u03B4\u03CC\u03C2, \u0391\u03C1., \r\n\u03A4\u039A,\u0394\u03B7\u03BC/\u03A4\u03BF\u03C0. \u039A\u03BF\u03B9\u03BD.,\u0394\u03B7\u03BC. \r\n\u0395\u03BD\u03CC\u03C4, \u0394\u03AE\u03BC\u03BF\u03C2,\u039D\u03BF\u03BC\u03CC\u03C2, \u03A7\u03CE\u03C1\u03B1):\r\n\u03A0\u03CC\u03BB\u03B7 \u03B5\u03BE\u03C9\u03C4\u03B5\u03C1\u03B9\u03BA\u03BF\u03CD:\r\n\r\n\u0398\u03C1\u03AE\u03C3\u03BA\u03B5\u03C5\u03BC\u03B1:\r\n\u0394\u03CC\u03B3\u03BC\u03B1:\r\n\u0394\u03B7\u03BC\u03BF\u03C4\u03BF\u03BB\u03CC\u03B3\u03B9\u03BF:\r\n\u0391\u03C1. \u0394\u03B7\u03BC\u03BF\u03C4\u03BF\u03BB\u03BF\u03B3\u03AF\u03BF\u03C5:\r\n\u0391\u03A6\u039C:\r\n\u0391\u039C\u039A\u0391:\r\n\u03A6\u03BF\u03C1\u03B5\u03AF\u03C2 \u0391\u03C3\u03C6\u03AC\u03BB\u03B9\u03C3\u03B7\u03C2: 1)\r\n\t\t  2)\r\n\t\t  3)\r\n\u0395\u03C0\u03CE\u03BD. \u03A0\u03B1\u03C4\u03C1\u03CC\u03C2(\u03BC\u03CC\u03BD\u03BF \r\n\u03BC\u03B7\u03C4\u03AD\u03C1\u03B1): \r\n\u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u0392\u0391\u03A0\u03A4\u0399\u03A3\u0397\u03A3                                   \r\n\u03A4\u03CC\u03C0\u03BF\u03C2 \u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B7\u03C2:                                      \u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B7\u03C2:\r\n\u0399\u03B5\u03C1\u03CC\u03C2 \u03BD\u03B1\u03CC\u03C2:                                          \u039F\u03BD\u03BF\u03BC\u03B1\u03C4\u03B5\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF \u03B9\u03B5\u03C1\u03AD\u03B1:\r\n\u0398\u03C1\u03AE\u03C3\u03BA\u03B5\u03C5\u03BC\u03B1-\u0394\u03CC\u03B3\u03BC\u03B1:                                     \u0391\u03BD\u03AC\u03B4\u03BF\u03C7\u03BF\u03B9:\r\n\u03A0\u0391\u03A1\u0391\u03A4\u0397\u03A1\u0397\u03A3\u0395\u0399\u03A3\r\n\r\n\r\n\t     \u039F/\u0397 \u03B4\u03B7\u03BB\u03CE\u03BD                                               \u039F/\u0397 \u039B\u03B7\u03BE\u03AF\u03B1\u03C1\u03C7\u03BF\u03C2\r\n");
+		scrollPane.setViewportView(textPane);
+	}
+
+}

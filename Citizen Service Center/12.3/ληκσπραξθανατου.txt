@@ -1,0 +1,65 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.BorderLayout;
+import javax.swing.JTextField;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+
+public class LhksiarxikhPrakshThanatou {
+
+	private JFrame frame;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LhksiarxikhPrakshThanatou window = new LhksiarxikhPrakshThanatou();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public LhksiarxikhPrakshThanatou() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 778, 480);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new BorderLayout(0, 0));
+		
+		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setFont(new Font("Tahoma", Font.BOLD, 26));
+		textField.setEditable(false);
+		textField.setText("\u039B\u0397\u039E\u0399\u0391\u03A1\u03A7\u0399\u039A\u0397 \u03A0\u03A1\u0391\u039E\u0397 \u0398\u0391\u039D\u0391\u03A4\u039F\u03A5");
+		frame.getContentPane().add(textField, BorderLayout.NORTH);
+		textField.setColumns(10);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setText("\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF\r\n\r\n\u038C\u03BD\u03BF\u03BC\u03B1\r\n\r\n\u038C\u03BD\u03BF\u03BC\u03B1 \u03C0\u03B1\u03C4\u03AD\u03C1\u03B1\r\n\r\n\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF \u03C0\u03B1\u03C4\u03AD\u03C1\u03B1\r\n\r\n\u038C\u03BD\u03BF\u03BC\u03B1 \u03BC\u03B7\u03C4\u03AD\u03C1\u03B1\u03C2\r\n\r\n\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF \u03BC\u03B7\u03C4\u03AD\u03C1\u03B1\u03C2\r\n\r\n\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2\r\n\r\n\u03A4\u03CC\u03C0\u03BF\u03C2 \u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B5\u03C9\u03C2\r\n\r\n\u0394\u03B7\u03BC\u03CC\u03C4\u03B7\u03C2\r\n\r\n\u03A4\u03CC\u03C0\u03BF\u03C2 \u03B8\u03B1\u03BD\u03AC\u03C4\u03BF\u03C5\r\n\r\n\r\n\u0391\u03BD\u03B1\u03C6\u03B5\u03C1\u03CC\u03BC\u03B5\u03BD\u03B7 \u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03B8\u03B1\u03BD\u03AC\u03C4\u03BF\u03C5\r\n\r\n\u0391\u03BD\u03B1\u03C6\u03B5\u03C1\u03CC\u03BC\u03B5\u03BD\u03B7 \u03CE\u03C1\u03B1 \u03B8\u03B1\u03BD\u03AC\u03C4\u03BF\u03C5\r\n\r\n\u0391\u03B9\u03C4\u03AF\u03B1 \u03B8\u03B1\u03BD\u03AC\u03C4\u03BF\u03C5\r\n");
+		scrollPane.setViewportView(textPane);
+	}
+
+}
+

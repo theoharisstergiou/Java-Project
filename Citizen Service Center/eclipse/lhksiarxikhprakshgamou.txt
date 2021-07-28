@@ -1,0 +1,80 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import com.jgoodies.forms.factories.FormFactory;
+import javax.swing.JTextField;
+import java.awt.BorderLayout;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JFormattedTextField;
+import javax.swing.JComboBox;
+import java.awt.ScrollPane;
+import java.awt.Point;
+import javax.swing.DropMode;
+import javax.swing.JToolBar;
+
+public class lhksiarxikhprakshgamou {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JScrollBar scrollBar;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					lhksiarxikhprakshgamou window = new lhksiarxikhprakshgamou();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public lhksiarxikhprakshgamou() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 1391, 816);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		textField = new JTextField();
+		textField.setBackground(new Color(0, 139, 139));
+		textField.setFont(new Font("Tahoma", Font.BOLD, 18));
+		textField.setEditable(false);
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setText("\u039B\u03B7\u03BE\u03B9\u03B1\u03C1\u03C7\u03B9\u03BA\u03AE \u03A0\u03C1\u03AC\u03BE\u03B7 \u0393\u03AC\u03BC\u03BF\u03C5");
+		frame.getContentPane().add(textField, BorderLayout.NORTH);
+		textField.setColumns(10);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBackground(new Color(135, 206, 235));
+		textArea.setEditable(false);
+		textArea.setForeground(new Color(0, 0, 0));
+		textArea.setTabSize(10);
+		textArea.setFont(new Font("Monospaced", Font.BOLD, 11));
+		textArea.setText("\u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u039B\u0397\u039E. \u03A0\u03A1\u0391\u039E\u0397\u03A3\r\n\r\n\u03A7\u03B1\u03C1\u03B1\u03BA\u03C4\u03B7\u03C1\u03B9\u03C3\u03C4\u03B9\u03BA\u03BF \u0391\u03C3\u03C6\u03B1\u03BB\u03B5\u03AF\u03B1\u03C2:\r\n\u03A3\u03C4\u03BF\u03B9\u03C7\u03B5\u03AF\u03B1 \u039B\u03B7\u03BE. \u03A0\u03C1\u03AC\u03BE\u03B7\u03C2(\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2/\u03A4\u03CC\u03BC\u03BF\u03C2/\u0388\u03C4\u03BF\u03C2):\r\n\u0397\u03BC.\u0394\u03AE\u03BB\u03C9\u03C3\u03B7\u03C2:\r\n\u0394\u03B7\u03BB\u03CE\u03BD\\\u03BF\u03CD\u03C3\u03B1:\r\n\r\n\u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u0393\u0391\u039C\u039F\u03A5\t\t\t\t\t\t\u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u0394\u0397\u039B\u039F\u03A5\u039D\u03A4\u039F\u03A3\r\n\r\n\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1:\t\t\t\t\t\t\u038C\u03BD\u03BF\u03BC\u03B1:\r\n\u03A4\u03CD\u03C0\u03BF\u03C2:\t\t\t\t\t\t\t\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF:\r\n\u0394\u03CC\u03B3\u03BC\u03B1:\t\t\t\t\t\t\t\u03A4\u03CC\u03C0\u03BF\u03C2 \u039A\u03B1\u03C4\u03BF\u03B9\u03BA\u03AF\u03B1\u03C2:\r\n\u0394\u03AE\u03BC\u03BF\u03C2:\t\t\t\t\t\t\t\r\n\u0394\u03AE\u03BC/\u03A4\u03BF\u03C0. \u039A\u03BF\u03B9\u03BD\u03CC\u03C4\u03B7\u03C4\u03B1:\r\n\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF \u03C4\u03AD\u03BA\u03BD\u03C9\u03BD:\r\n\r\n\u03A3\u03A4\u039F\u0399\u03A7\u0395\u0399\u0391 \u0396\u0395\u03A5\u0393\u039F\u03A5\u03A3\t\t\t\u0386\u03BD\u03B4\u03C1\u03B1\u03C2\t\t\t\t\u0393\u03C5\u03BD\u03B1\u03AF\u03BA\u03B1\r\n\r\n\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF:\r\n\u038C\u03BD\u03BF\u03BC\u03B1:\r\n\u038C\u03BD\u03BF\u03BC\u03B1 \u03A0\u03B1\u03C4\u03C1\u03CC\u03C2:\r\n\u038C\u03BD\u03BF\u03BC\u03B1 \u039C\u03B7\u03C4\u03C1\u03CC\u03C2:\r\n\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF \u03A0\u03B1\u03C4\u03C1\u03CC\u03C2:\r\n\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF \u039C\u03B7\u03C4\u03C1\u03CC\u03C2:\r\n\u0399\u03B8\u03B1\u03B3\u03AD\u03BD\u03B5\u03B9\u03B1:\r\n\u0398\u03C1\u03AE\u03C3\u03BA\u03B5\u03C5\u03BC\u03B1:\r\n\u03A7\u03CE\u03C1\u03B1 \u0393\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2:\r\n\u03A0\u03CC\u03BB\u03B7 \u0393\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2(\u03B5\u03BE\u03C9\u03C4\u03B5\u03C1\u03B9\u03BA\u03BF\u03CD):\r\n\u0394\u03AE\u03BC\u03BF\u03C2 \u0393\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2:\r\n\u0394\u03B7\u03BC/\u03A4\u03BF\u03C0.\u039A\u03BF\u03B9\u03BD\u03CC\u03C4\u03B7\u03C4\u03B1\r\n\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2:\r\n\r\n\u03A4\u03CC\u03C0\u03BF\u03C2 \u039A\u03B1\u03C4\u03BF\u03B9\u03BA\u03AF\u03B1\u03C2(\u039F\u03B4\u03CC\u03C2,\u0391\u03C1.,\r\n\u03A4\u039A,\u0394\u03B7\u03BC/\u03A4\u03BF\u03C0.\u039A\u03BF\u03B9\u03BD,\r\n\u0394\u03B7\u03BC.\u0395\u03BD\u03CC\u03C4,\u0394\u03AE\u03BC\u03BF\u03C2,\u039D\u03BF\u03BC\u03CC\u03C2,\r\n\u03A7\u03CE\u03C1\u03B1):\r\n\u0397\u03BC.\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2:\r\n\u0394\u03B7\u03BC\u03BF\u03C4\u03BF\u03BB\u03CC\u03B3\u03B9\u03BF:\r\n\u0391\u03C1.\u03B4\u03B7\u03BC\u03BF\u03C4\u03BF\u03BB\u03BF\u03B3\u03AF\u03BF\u03C5:\r\n\u0391\u03A6\u039C:\r\n\u0391\u039C\u039A\u0391:\r\n\u03A6\u03BF\u03C1\u03B5\u03AF\u03C2 \u0391\u03C3\u03C6\u03AC\u03BB\u03B9\u03C3\u03B7\u03C2:1)\r\n\t       2)\r\n\t       3)\r\n\u0392\u03B1\u03B8\u03BC\u03CC\u03C2 \u0393\u03AC\u03BC\u03BF\u03C5:\r\n\r\n\u03A0\u03B1\u03C1\u03B1\u03C4\u03B7\u03C1\u03AE\u03C3\u03B5\u03B9\u03C2\r\n\t\t\r\n\t\t\u039F/\u0397 \u03B4\u03B7\u03BB\u03CE\u03BD\t\t\t\t\t\u039F/\u0397 \u039B\u03B7\u03BE\u03AF\u03B1\u03C1\u03C7\u03BF\u03C2\r\n");
+		frame.getContentPane().add(textArea, BorderLayout.CENTER);
+		
+		
+	}
+
+}

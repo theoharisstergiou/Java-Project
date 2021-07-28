@@ -1,0 +1,294 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JLabel;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.awt.event.ActionEvent;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.DropMode;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Window.Type;
+
+public class BebaiwshMonimhsKat {
+
+	JFrame frmKe;
+	private JTextField txt1;
+	private JTextField txt2;
+	private JTextField textField_6;
+	private JLabel label;
+	private JLabel label_1;
+	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
+	private JTextField txt3;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JTextField txt4;
+	private JLabel label_2;
+	private JLabel label_3;
+	private JTextField txt5;
+	private JLabel label_4;
+	private JLabel label_5;
+	private JLabel label_6;
+	private JLabel lblNewLabel_5;
+	private JButton btnNewButton;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void NewScreen() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					BebaiwshMonimhsKatoikias window = new BebaiwshMonimhsKatoikias();
+					window.frmKe.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+ 
+
+	public BebaiwshMonimhsKatoikias() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmKe = new JFrame();
+		frmKe.setType(Type.UTILITY);
+		frmKe.setTitle("KE\u03A0");
+		frmKe.setBackground(Color.BLACK);
+		frmKe.getContentPane().setBackground(new Color(135, 206, 235));
+		frmKe.setBounds(100, 100, 964, 686);
+		frmKe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		txt1 = new JTextField();
+		txt1.setEditable(false);
+		txt1.setHorizontalAlignment(SwingConstants.CENTER);
+		txt1.setColumns(10);
+		
+		txt2 = new JTextField();
+		txt2.setEditable(false);
+		txt2.setColumns(10);
+		
+		textField_6 = new JTextField();
+		textField_6.setBackground(new Color(135, 206, 235));
+		textField_6.setFont(new Font("Tahoma", Font.BOLD, 20));
+		textField_6.setEditable(false);
+		textField_6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_6.setText("\u0392\u0395\u0392\u0391\u0399\u03A9\u03A3\u0397 \u039C\u039F\u039D\u0399\u039C\u0397\u03A3 \u039A\u0391\u03A4\u039F\u0399\u039A\u0399\u0391\u03A3");
+		textField_6.setColumns(10);
+		
+		label = new JLabel("\u039F/\u0397");
+		label.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		label_1 = new JLabel("\u039F \u0394\u03AE\u03BC\u03B1\u03C1\u03C7\u03BF\u03C2 \u039B\u03B1\u03BC\u03B9\u03AD\u03C9\u03BD \u03A6\u03B8\u03B9\u03CE\u03C4\u03B9\u03B4\u03B1\u03C2");
+		label_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		lblNewLabel = new JLabel("\u0392\u03B5\u03B2\u03B1\u03B9\u03CE\u03BD\u03B5\u03B9 \u03CC\u03C4\u03B9 :");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		lblNewLabel_1 = new JLabel("\u03C4\u03BF\u03C5");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		lblNewLabel_2 = new JLabel("\u03BA\u03B1\u03B9 \u03C4\u03B7\u03C2");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		txt3 = new JTextField();
+		txt3.setEditable(false);
+		txt3.setColumns(10);
+		
+		lblNewLabel_3 = new JLabel("\u03B5\u03AF\u03BD\u03B1\u03B9 \u03BC\u03CC\u03BD\u03B9\u03BC\u03BF\u03C2/\u03B7 \u03BA\u03AC\u03C4\u03BF\u03B9\u03BA\u03BF\u03C2 \u03C4\u03B7\u03C2 \u0394\u03B7\u03BC\u03BF\u03C4\u03B9\u03BA\u03AE\u03C2 \u0395\u03BD\u03CC\u03C4\u03B7\u03C4\u03B1\u03C2");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		lblNewLabel_4 = new JLabel("\u039B\u03B1\u03BC\u03AF\u03B1\u03C2 \u03C4\u03BF\u03C5 \u0394\u03AE\u03BC\u03BF\u03C5 \u039B\u03B1\u03BC\u03B9\u03AD\u03C9\u03BD \u03A6\u03B8\u03B9\u03CE\u03C4\u03B9\u03B4\u03B1\u03C2 \u03BA\u03B1\u03B9 \u03B4\u03B9\u03B1\u03BC\u03AD\u03BD\u03B5\u03B9 \u03B5\u03C0\u03AF \u03C4\u03B7\u03C2 \u03BF\u03B4\u03BF\u03CD");
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		txt4 = new JTextField();
+		txt4.setEditable(false);
+		txt4.setColumns(10);
+		
+		label_2 = new JLabel(",");
+		label_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		label_3 = new JLabel("\u03A4.\u039A.");
+		label_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		txt5 = new JTextField();
+		txt5.setEditable(false);
+		txt5.setColumns(10);
+		
+		label_4 = new JLabel(".");
+		label_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		label_5 = new JLabel("\u0395\u03BA\u03B4\u03AF\u03B4\u03B5\u03C4\u03B1\u03B9 \u03B7 \u03C0\u03B1\u03C1\u03BF\u03CD\u03C3\u03B1 \u03BC\u03B5\u03C4\u03AC \u03B1\u03C0\u03CC \u03B1\u03AF\u03C4\u03B7\u03C3\u03B7 \u03C4\u03BF\u03C5/\u03B7\u03C2 \u03B5\u03BD\u03B4\u03B9\u03B1\u03C6\u03B5\u03C1\u03CC\u03BC\u03B5\u03BD\u03BF\u03C5/\u03B7\u03C2 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03C4\u03B7 \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03B5\u03CD\u03C3\u03B5\u03B9 \u03C3\u03B5 \u03BA\u03AC\u03B8\u03B5 \u03BD\u03CC\u03BC\u03B9\u03BC\u03B7 \u03C7\u03C1\u03AE\u03C3\u03B7.");
+		label_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		label_6 = new JLabel("\u039C\u03B5 \u03B5\u03BD\u03C4\u03BF\u03BB\u03AE \u0394\u03B7\u03BC\u03AC\u03C1\u03C7\u03BF\u03C5");
+		label_6.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		lblNewLabel_5 = new JLabel("\u039F/\u0397 \u03C5\u03C0\u03AC\u03BB\u03BB\u03B7\u03BB\u03BF\u03C2 \u03C4\u03BF\u03C5 \u0394\u03B7\u03BC\u03BF\u03C4\u03BF\u03BB\u03BF\u03B3\u03AF\u03BF\u03C5 ");
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		btnNewButton = new JButton("\u0388\u03BE\u03BF\u03B4\u03BF\u03C2");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frmKe.dispose();
+				Exodos rt= new Exodos(); //POIA SELIDA THA ANOIKSEI META TO CLICK
+				rt.NewScreen(); //ANOIGEI KAINOURGIO SCREEN
+				rt.setVisible(true);
+			
+		}
+		}
+		);
+	
+
+		
+		GroupLayout groupLayout = new GroupLayout(frmKe.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(12)
+					.addComponent(textField_6, GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+					.addGap(23))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(28)
+					.addComponent(label_1, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(28)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addComponent(label, GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
+							.addGap(99))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(55)
+							.addComponent(txt1, GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)))
+					.addGap(22)
+					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(txt2, GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+					.addGap(12)
+					.addComponent(lblNewLabel_2, GroupLayout.PREFERRED_SIZE, 59, GroupLayout.PREFERRED_SIZE)
+					.addGap(5)
+					.addComponent(txt3, GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+					.addGap(12)
+					.addComponent(lblNewLabel_3, GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(28)
+					.addComponent(lblNewLabel_4, GroupLayout.PREFERRED_SIZE, 516, GroupLayout.PREFERRED_SIZE)
+					.addGap(12)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addComponent(txt4, GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+							.addGap(6))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(118)
+							.addComponent(label_2, GroupLayout.PREFERRED_SIZE, 10, GroupLayout.PREFERRED_SIZE)))
+					.addGap(4)
+					.addComponent(label_3, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+					.addGap(12)
+					.addComponent(txt5, GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+					.addGap(12)
+					.addComponent(label_4, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+					.addGap(73))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(28)
+					.addComponent(label_5, GroupLayout.PREFERRED_SIZE, 895, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(325)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblNewLabel_5, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(37)
+							.addComponent(label_6, GroupLayout.PREFERRED_SIZE, 179, GroupLayout.PREFERRED_SIZE))))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(28)
+					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 241, GroupLayout.PREFERRED_SIZE))
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addContainerGap(832, Short.MAX_VALUE)
+					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap())
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+					.addGap(13)
+					.addComponent(label_1, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+					.addGap(26)
+					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(62)
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addGroup(groupLayout.createSequentialGroup()
+									.addGap(2)
+									.addComponent(label, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE))
+								.addComponent(txt1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addGroup(groupLayout.createSequentialGroup()
+									.addGap(3)
+									.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE))
+								.addGroup(groupLayout.createSequentialGroup()
+									.addGap(4)
+									.addComponent(lblNewLabel_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
+								.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
+									.addComponent(lblNewLabel_3, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(txt3, Alignment.LEADING))))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(64)
+							.addComponent(txt2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+					.addGap(10)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(1)
+							.addComponent(lblNewLabel_4, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE))
+						.addComponent(txt4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(1)
+							.addComponent(label_2, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(1)
+							.addComponent(label_3, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE))
+						.addComponent(txt5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(1)
+							.addComponent(label_4, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)))
+					.addGap(8)
+					.addComponent(label_5, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
+					.addGap(107)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(39)
+							.addComponent(lblNewLabel_5, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE))
+						.addComponent(label_6, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap())
+		);
+		frmKe.getContentPane().setLayout(groupLayout);
+	}
+
+	public void setVisible(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+}
